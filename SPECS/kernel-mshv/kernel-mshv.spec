@@ -11,7 +11,7 @@
 Summary:        Mariner kernel that has MSHV Host support
 Name:           kernel-mshv
 Version:        5.15.157.mshv1
-Release:        4%{?dist}
+Release:        5%{?dist}
 License:        GPLv2
 Group:          Development/Tools
 Vendor:         Microsoft Corporation
@@ -224,7 +224,10 @@ echo "initrd of kernel %{uname_r} removed" >&2
 %{_includedir}/perf/perf_dlfilter.h
 
 %changelog
-* Fri Oct 25 2024 Mitch ZHu <mitchzhu@microsoft.com> - 5.15.157.mshv1-4
+* Tue Dec 17 2024 Mitch ZHu <mitchzhu@microsoft.com> - 5.15.157.mshv1-5
+- Enable DM Verity verify roothash
+
+* Fri Dec 13 2024 Mitch ZHu <mitchzhu@microsoft.com> - 5.15.157.mshv1-4
 - Disable kernel module signature verification
 
 * Fri Oct 25 2024 Saul Paredes <saulparedes@microsoft.com> - 5.15.157.mshv1-3

@@ -30,7 +30,7 @@
 Summary:        Linux Kernel
 Name:           kernel
 Version:        6.6.62.1
-Release:        1%{?dist}
+Release:        1002%{?dist}
 License:        GPLv2
 Vendor:         Microsoft Corporation
 Distribution:   Azure Linux
@@ -424,6 +424,9 @@ echo "initrd of kernel %{uname_r} removed" >&2
 %{_sysconfdir}/bash_completion.d/bpftool
 
 %changelog
+* Tue Dec 17 2024 Rachel Menge <rachelmenge@microsoft.com> - 6.6.62.1-1002
+- Disable debug preempt
+
 * Tue Dec 03 2024 CBL-Mariner Servicing Account <cblmargh@microsoft.com> - 6.6.62.1-1
 - Auto-upgrade to 6.6.62.1
 

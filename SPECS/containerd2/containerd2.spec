@@ -15,6 +15,8 @@ Distribution: Azure Linux
 Source0: https://github.com/containerd/containerd/archive/v%{version}.tar.gz#/%{upstream_name}-%{version}.tar.gz
 Source1: containerd.service
 Source2: containerd.toml
+# Added patch to support tardev-snapshotter for Kata CC
+Patch0:  add-tardev-support.patch
 
 %{?systemd_requires}
 
@@ -83,3 +85,4 @@ fi
 - Created a standalone package for containerd 2.0.0
 - Initial CBL-Mariner import from Azure
 - Initial version and License verified
+- Added tardev-snapshotter patch

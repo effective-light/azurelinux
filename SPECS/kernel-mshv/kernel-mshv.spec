@@ -11,14 +11,14 @@
 Summary:        Mariner kernel that has MSHV Host support
 Name:           kernel-mshv
 Version:        5.15.157.mshv1
-Release:        5%{?dist}
+Release:        6%{?dist}
 License:        GPLv2
 Group:          Development/Tools
 Vendor:         Microsoft Corporation
 Distribution:   Azure Linux
 Source0:        %{_distro_sources_url}/%{name}-%{version}.tar.gz
 Source1:        config
-Source2:        cbl-mariner-ca-20211013.pem
+Source2:        cert.pem
 Source3:        50_mariner_mshv.cfg
 Source4:        50_mariner_mshv_menuentry
 Patch0:         fix_python_3.12_build_errors.patch
@@ -224,6 +224,9 @@ echo "initrd of kernel %{uname_r} removed" >&2
 %{_includedir}/perf/perf_dlfilter.h
 
 %changelog
+* Tue Dec 17 2024 Mitch ZHu <mitchzhu@microsoft.com> - 5.15.157.mshv1-6
+- Add cert.pem
+
 * Tue Dec 17 2024 Mitch ZHu <mitchzhu@microsoft.com> - 5.15.157.mshv1-5
 - Enable DM Verity verify roothash
 
